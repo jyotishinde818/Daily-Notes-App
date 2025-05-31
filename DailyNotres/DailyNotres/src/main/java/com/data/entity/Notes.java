@@ -1,0 +1,85 @@
+package com.data.entity;
+import java.time.LocalDateTime;
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="notes_deta")
+public class Notes {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+//	private long id;
+//	private String title;
+//	private String content;
+//	private LocalDateTime createdAt;
+	
+	private int id;
+	private String title;
+	private String content;
+	private Date createdAt;
+    
+	private long userId;
+
+	public Notes() {
+		super();
+	}
+
+	public Notes(int id, String title, String content, Date createdAt, long userId) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.content = content;
+		this.createdAt = createdAt;
+		this.userId = userId;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(long userId) {
+		this.userId = userId;
+	}
+
+	
+}

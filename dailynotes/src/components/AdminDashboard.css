@@ -1,0 +1,139 @@
+body {
+  /* background-image: url('https://images.unsplash.com/photo-1518972559570-5ecbbf53b6b2'); */
+  background-image: url('https://www.pexels.com/photo/pens-and-markers-on-case-53874/');
+  
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* .admin-dashboard::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(108, 86, 86, 0.5);
+  z-index: -1;
+} */
+
+.admin-dashboard {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  /* z-index: 0; */
+}
+
+.admin-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.stats-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+  color: #00ffd5;
+  letter-spacing: 1px;
+}
+
+.note-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  color: #302c2c;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  padding: 30px;
+  height: 60%;
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.note-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+}
+
+.note-badge {
+  background: #00ffd5;
+  color: #111;
+  font-weight: 700;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  letter-spacing: 1px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+/* Refresh button */
+.refresh-btn {
+  display: block;
+  margin: 0 auto 40px auto;
+  width: 160px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  background-color: transparent;
+  border: 2px solid #00ffd5;
+  color: #00ffd5;
+  border-radius: 30px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.refresh-btn:hover {
+  background-color: #00ffd5;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-title {
+    font-size: 2rem;
+  }
+  
+  .stats-box {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+  
+  .note-badge {
+    font-size: 0.7rem;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+}

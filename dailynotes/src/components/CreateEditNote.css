@@ -1,0 +1,130 @@
+/*CreateEditNote.css 
+
+.create-edit-bg {
+  background: linear-gradient(
+      rgba(10, 25, 47, 0.8),
+      rgba(10, 25, 47, 0.8)
+    ),
+    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 80px;
+  color: #fff;
+}
+
+.card-form {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-form h3 {
+  color: #0d1b2a;
+  font-weight: 600;
+}*/
+
+
+/* Full-page background with image and overlay */
+.create-note-bg {
+  background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.create-note-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+
+/* Form container */
+.form-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+/* Title */
+.form-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Input fields */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 15px 18px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  backdrop-filter: blur(6px);
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #e0e0e0;
+}
+
+input:focus,
+textarea:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: #00c9a7;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0, 201, 167, 0.4);
+}
+
+button:hover {
+  background: #00a882;
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 30px 20px;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+}
